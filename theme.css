@@ -1,0 +1,380 @@
+* {
+  font-family: 'Mali', cursive;
+  text-transform: capitalize;
+  border-radius: 20px;
+}
+
+/* INDEX PAGE STYLES */
+
+.index__body {
+  height: 100vh;
+  background-color: #f8f8ef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.index__logo {
+  height: 50vh;
+}
+
+.index__menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.index__menu__button {
+  padding: 10px 35px;
+  margin: 0 10px;
+}
+
+/* GENERAL ITEM PAGE STYLES */
+
+.body {
+  background-color: #c2b2d6;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin: 10px 30px;
+  color: #5e4c75;
+}
+
+.title {
+  margin: auto;
+  font-size: 50px;
+}
+
+.hemisphere {
+  display: flex;
+  align-items: center;
+}
+
+.hemisphere__text {
+  margin: 0;
+  margin-right: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/* Filters Styles */
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  color: #634c75;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.button__toggleDonated:disabled {
+  background-color: #8a8a8a;
+}
+
+.filters__dropdown {
+  margin: 0 20px;
+}
+
+.filters__search, .filters__dropdown {
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.fossils__filters__search, .art__filters__search, .songs__filters__search, .gyroids__filters__search {
+  margin-left: 30px;
+}
+
+.filters__search:active, .filters__search:focus, .filters__dropdown:active, .filters__dropdown:focus {
+  outline: none;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 30px;
+}
+
+.main-container.hide-donated > .is-donated {
+  /* Use important to overide inline style from search */
+  display: none !important;
+}
+
+/* STYLES FOR ITEM CONTAINER "CARD" */
+
+.container {
+  background-color: #827099;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  margin: 10px;
+}
+
+.container > .parts {
+  width: 90%;
+  border: 2px solid white;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.info > img {
+  margin-top: 10px;
+  height: 110px;
+  border: 5px solid #544c75;
+}
+
+.art__container__info > .art__image {
+  height: auto;
+  max-width: 90%;
+}
+
+.container p, .container h2 {
+  color: white;
+  word-break: break-all;
+  text-align: center;
+}
+
+.container label {
+  color: white;
+  font-size: 18px;
+}
+
+.container > * {
+  margin: 10px 0;
+}
+
+.name {
+  color: white;
+}
+
+.container.is-filtered {
+  /* Use important to overide inline style from search */
+  display: none !important;
+}
+
+/* Clock (item time) Styles */
+
+.time, .months {
+  width: 90%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.eleven-am {
+  border-right: 2px solid white;
+}
+
+.available {
+  background-color: #213d33;
+}
+
+.time__text, .months__text {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.time__text p, .months__text p {
+  margin: 0;
+}
+
+[data-tooltip]:before {
+  background-color: #f8f8ef;
+  border-radius: 10px;
+  padding: 0 10px;
+  font-weight: bold;
+  color: #383152;
+  position : absolute;
+  margin-left: 60px;
+  content : attr(data-tooltip);
+  opacity : 0;
+}
+
+[data-tooltip]:hover:before {
+  opacity : 1;
+}
+
+/* Calendar (item months) Styles */
+
+.months {
+  padding: 0 15px;
+}
+
+.current__time {
+  width: 50%;
+}
+
+/* Turn off the border for the last hour div in the clock and the last month div in the calendar */
+
+[class*="__23"], [class*="__december"] {
+  border: none;
+}
+
+/* Trackers (checkboxes) Styles */
+
+.trackers {
+  background-color: #383152;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  margin: 10px 0 0 0;
+}
+
+.trackers__items {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.part:not(:last-child) > .trackers {
+  border-radius: 0
+}
+
+/* Universal Button Styles */
+
+button {
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  background-color: #554c75;
+  color: white;
+  transition: 0.3s;
+}
+
+button:active, button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: #383152;
+}
+
+button:active {
+  background-color: #2d213d;
+}
+
+/* Universal Checkbox Styles */
+
+input[type="checkbox"] {
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px;
+  outline: none;
+}
+
+/* MOBILE PHONE SIZE STYLES */
+
+@media (max-width: 620px) {
+  .index__logo {
+    width: 100%;
+    height: auto;
+  }
+
+  .index__menu {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .index__menu__button {
+    margin: 5px 0;
+  }
+
+  .header {
+    margin: 0 10px;
+  }
+
+  .hemisphere__text {
+    margin-right: 5px;
+  }
+
+  .container {
+    flex-grow: 1;
+  }
+
+  .name, .part__name {
+    font-size: 20px;
+  }
+
+  .container__info__text > p, .price {
+    font-size: 14px;
+  }
+
+  .fossil__container {
+    height: auto;
+  }
+
+  .fish__container > *, .bug__container > * {
+    margin: 0;
+  }
+
+  .info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .art__container__info {
+    flex-direction: column;
+  }
+
+  .container__info__text {
+    margin-left: 10px;
+  }
+
+  .container__info__text > h2 {
+    word-spacing: 9999px;
+  }
+
+  .fossil__name {
+    margin-top: 20px;
+  }
+}
+
+/* Keep filters stacked until width is over 850px */
+
+@media (max-width: 850px) {
+  .filters {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .filters__dropdown__container {
+    margin: 10px 0;
+  }
+
+  .filters__dropdown {
+    font-size: 14px;
+  }
+
+  .fossils__filters__search, .art__filters__search, .songs__filters__search {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}

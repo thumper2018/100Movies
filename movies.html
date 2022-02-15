@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>movie List</title>
+    <link href="https://fonts.googleapis.com/css?family=Mali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body class="movies__body body" onload="loadData()">
+    <div class="movies__header header">
+      </button>
+      <h1 class="movies__title title">100+ Movies</h1>
+    </div>
+
+    <div class="movies__filters filters">
+      <button type="button" class="button__togglewatched" onclick="togglewatched()">
+        Checking...
+      </button>
+      <input type="text" class="movies__filters__search filters__search" placeholder="Search!" oninput="search()"></input>
+    </div>
+
+    <div class="movies__container main-container">
+    </div>
+  </body>
+
+  <script src="movies_json.js"></script>
+  <script src="pt.js"></script>
+
+</html>
